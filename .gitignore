@@ -1,0 +1,74 @@
+.DS_Store
+# Compiled object files
+*.o
+*.obj
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled static libraries
+*.lib
+*.a
+
+# Executable files
+*.exe
+*.out
+*.app
+*.hex
+*.elf
+
+# Debug files
+*.dSYM/
+*.stackdump
+
+# Dependency or intermediate files
+*.dep
+*.d
+
+# Build directories
+/build/
+/bin/
+/lib/
+/out/
+
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+/CMakeScripts/
+/Testing/
+/Makefile
+cmake_install.cmake
+
+# Generated files
+*.gch
+*.pch
+
+# IDE specific files (for common IDEs)
+.vscode/
+*.swp
+*~
+
+# CLion specific files
+.idea/
+cmake-build-debug/
+
+# Eclipse specific files
+.settings/
+.cproject
+.project
+
+# Code::Blocks specific files
+*.layout
+*.depend
+
+# Visual Studio specific files
+.vscode/
+*.vcxproj
+*.vcxproj.user
+*.sln
+
+# Xcode specific files
+*.xcworkspace
+*.xcuserdatad/
