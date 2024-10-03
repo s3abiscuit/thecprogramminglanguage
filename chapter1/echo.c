@@ -1,4 +1,4 @@
-# include <stdio.h>
+#include <stdio.h>
 
 int main(int argc, char const *argv[])
 {
@@ -8,6 +8,6 @@ int main(int argc, char const *argv[])
     {
         putchar(c);
     }
-    
+
     return 0;
 }

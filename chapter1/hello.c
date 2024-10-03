@@ -1,10 +1,11 @@
-# include <stdio.h>
+#include <stdio.h>
 
 /**
  * compile: cc hello.c
  * run: ./a.out
  */
 
-int main () {
+int main()
+{
     printf("hello, world\n");
 }
