@@ -1,18 +1,18 @@
 #include <stdio.h>
 #define MAXLINE 100 /* maxium input line length */
 
-int maxcount;
-char line[MAXLINE];
-char maxline[MAXLINE];
+char line[MAXLINE]; // shared between getoneline and copy
+char maxline[MAXLINE]; // shared between main and copy
 
 int getoneline(void);
 void copy(void);
 
 int main(int argc, char const *argv[])
 {
-    int count;
-    extern int maxcount;
     extern char maxline[MAXLINE];
+
+    int count;
+    int maxcount;
 
     maxcount = 0;
     while ((count = getoneline()) > 0)
@@ -33,10 +33,10 @@ int main(int argc, char const *argv[])
 
 int getoneline(void)
 {
+    extern char line[];
+
     int c, i;
 
-    extern char line[];
-    
     for (i = 0; (c = getchar()) != EOF && i < MAXLINE - 1 && c != '\n'; i++)
     {
         line[i] = c;
@@ -53,10 +53,11 @@ int getoneline(void)
 
 void copy(void)
 {
+    extern char line[], maxline[];
+
     int i;
     i = 0;
 
-    extern char line[], maxline[];
     while ((maxline[i] = line[i]) != '\n')
     {
         i++;

@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include "helper.h"
 
-int maxcount;
-
 int main(int argc, char const *argv[])
 {
-    int count;
-    extern int maxcount;
     extern char maxline[MAXLINE];
+
+    int count;
+    int maxcount;
 
     maxcount = 0;
     while ((count = getoneline()) > 0)

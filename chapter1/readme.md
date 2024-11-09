@@ -34,3 +34,10 @@ $(TARGET): $(OBJ)
 clean:
 	rm -f $(OBJ) $(TARGET)
 ```
+实际执行命令
+
+```
+gcc -Wall -c main.c -o main.o
+gcc -Wall -c helper.c -o helper.o
+gcc main.o helper.o -o my_program
+```
